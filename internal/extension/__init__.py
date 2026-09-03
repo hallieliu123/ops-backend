@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+@Time  : 2026/8/19 17:21
+@Author: hallieliu123@163.com
+@File  : __init__.py.py
+"""
+from .data_extension import db
+from .migrate_extension import migrate
+from .module_extension import ExtensionModule
+
+__all__ = ["db", "ExtensionModule", "migrate"]
