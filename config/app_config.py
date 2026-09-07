@@ -22,7 +22,7 @@ def _get_bool_env(key: str):
 class Config:
     def __init__(self):
         # wtf csrf config
-        self.WTF_CSRF_ENABLED = _get_env("WTF_CSRF_ENABLED")
+        self.WTF_CSRF_ENABLED = _get_bool_env("WTF_CSRF_ENABLED")
 
         # sqlalchemy config imported
         self.SQLALCHEMY_DATABASE_URI = _get_env("SQLALCHEMY_DATABASE_URI")

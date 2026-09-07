@@ -1,8 +1,10 @@
 #pkg
-env/
+env/*
 
 #cache
-__pycache__/
+__pycache__/*
 *.pyc
 
-.idea/
+.idea/*
+
+.env

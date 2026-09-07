@@ -24,7 +24,7 @@ class Router:
         # 2.将访问的url与handler控制器连接
         bp.add_url_rule('/ping', view_func=self.appHandler.ping)
 
-        bp.add_url_rule('/chat/completions', methods=["POST"], view_func=self.appHandler.completion)
+        bp.add_url_rule('/apps/<uuid:app_id>/debug', methods=["POST"], view_func=self.appHandler.debug)
 
         bp.add_url_rule('/app', methods=["POST"], view_func=self.appHandler.create_app)
         bp.add_url_rule('/app/<uuid:app_id>', methods=["POST"], view_func=self.appHandler.get_app)
