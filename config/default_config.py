@@ -7,7 +7,7 @@
 """
 DEFAULT_CONFIG = {
     # sqlalchemy default config
-    "SQLALCHEMY_DATABASE_URI": "postgresql://postgres:postgres@192.168.3.140:5432/llmops?client_encoding=utf8",
+    "SQLALCHEMY_DATABASE_URI": "postgresql://postgres:postgres@localhost:5432/llmops?client_encoding=utf8",
     "SQLALCHEMY_POOL_SIZE": "30",
     "SQLALCHEMY_POOL_RECYCLE": "3600",
     "SQLALCHEMY_RECORD_QUERIES": "False",

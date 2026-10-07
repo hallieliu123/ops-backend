@@ -6,5 +6,6 @@
 @File  : __init__.py.py
 """
 from .app_service import AppService
+from .vectorDB_service import VectorDBService
 
-__all__ = ['AppService']
+__all__ = ['AppService', 'VectorDBService']

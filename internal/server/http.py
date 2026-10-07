@@ -8,6 +8,7 @@
 import os
 
 from flask import Flask
+from flask_cors import CORS
 from flask_migrate import Migrate
 
 from config import Config
@@ -29,6 +30,19 @@ class Http(Flask):
         router.register_routes(self)
 
         self.register_error_handler(Exception, self._register_error_handler)  # 异常捕获
+
+        # 3.注册跨域
+        CORS(
+            self,
+            supports_credentials=True,
+            resources={
+                r"/*": {
+                    "origins": "http://localhost:3000",
+                    "allow_headers": ["content-type", "Authorization"],
+                    "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"],
+                },
+            }
+        )
 
         # 初始化flask扩展
         db.init_app(self)
